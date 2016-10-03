@@ -7,16 +7,28 @@
 
     $scope.name ="";
     $scope.message= "";
-    $scope.array = "";
+ 
     $scope.pressedButton = function()
     {
       $scope.array= $scope.name.split(',');
-      if ($scope.array.length <=3)
+      console.log ($scope.array.length);
+
+      if (($scope.array.length <=3 ) )
       {
-        $scope.message="Enjoy it";
+         if($scope.array == "")
+          { 
+            $scope.message="Please insert data first";
+          }
+          else
+          {
+
+            $scope.message="Enjoy it";
+          }
       }
       else
-        { $scope.message= "Too Much!";
+      {
+       
+        $scope.message= "Too Much!";
       
       }
     }
